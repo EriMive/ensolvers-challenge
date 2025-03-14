@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-03-14T19:04:00.291Z",
+    "end": "2025-03-14T19:04:11.708Z",
+    "duration": 11417,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c5aef772-fa74-4f03-b0d1-7707a7b4369d",
+      "title": "",
+      "fullFile": "cypress/e2e/folderManagement/folderManagementTest.cy.js",
+      "file": "cypress/e2e/folderManagement/folderManagementTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e579f037-75f1-4477-aa5b-0de4c39c05b2",
+          "title": "Folder Management Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a new Folder",
+              "fullTitle": "Folder Management Tests Create a new Folder",
+              "timedOut": null,
+              "duration": 3597,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('folderData').then(folderData => {\n  const originalFolderName = folderData.originalFolderName;\n  _DashBoardPage.default.getManageListMenu().click();\n  _FolderManagementPage.default.folderManagingBtn().click();\n  cy.url().should('include', '/folder');\n  cy.get('[data-cy=\"entityCreateButton\"]').click();\n  cy.get('[data-cy=\"name\"]').should('be.visible').clear().type(originalFolderName, {\n    delay: 100\n  });\n  cy.get('[data-cy=\"entityCreateSaveButton\"]').click();\n});",
+              "err": {},
+              "uuid": "16bad3d4-e911-4479-9187-04c7243ebe66",
+              "parentUUID": "e579f037-75f1-4477-aa5b-0de4c39c05b2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit Existing Folder",
+              "fullTitle": "Folder Management Tests Edit Existing Folder",
+              "timedOut": null,
+              "duration": 4461,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('folderData').then(folderData => {\n  const updatedFolderName = folderData.updatedFolderName;\n  _DashBoardPage.default.getManageListMenu().click();\n  _FolderManagementPage.default.folderManagingBtn().click();\n  cy.url().should('include', '/folder');\n  cy.get('[data-cy=\"entityEditButton\"]').first().click();\n  cy.get('[data-cy=\"name\"]').should('be.visible').clear().type(updatedFolderName, {\n    delay: 100\n  });\n  cy.get('[data-cy=\"entityCreateSaveButton\"]').click();\n});",
+              "err": {},
+              "uuid": "843ff692-aef5-45ca-8af3-0fd95ff98b26",
+              "parentUUID": "e579f037-75f1-4477-aa5b-0de4c39c05b2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete Existing Folder",
+              "fullTitle": "Folder Management Tests Delete Existing Folder",
+              "timedOut": null,
+              "duration": 2524,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_DashBoardPage.default.getManageListMenu().click();\n_FolderManagementPage.default.folderManagingBtn().click();\ncy.url().should('include', '/folder');\ncy.get('[data-cy=\"entityDeleteButton\"]').first().click();\ncy.get('[data-cy=\"entityConfirmDeleteButton\"]').click();",
+              "err": {},
+              "uuid": "95525cad-3d04-4653-92d8-3aa6384f52f7",
+              "parentUUID": "e579f037-75f1-4477-aa5b-0de4c39c05b2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "16bad3d4-e911-4479-9187-04c7243ebe66",
+            "843ff692-aef5-45ca-8af3-0fd95ff98b26",
+            "95525cad-3d04-4653-92d8-3aa6384f52f7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10582,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -23,12 +23,10 @@ class TaskManagementPage {
     return cy.contains('button', 'Save')
   }
 
-  // Selecciona el botón de edición del primer elemento
   editTaskBtn() {
     return cy.get(':nth-child(1) > .text-right > .btn-group > [data-cy="entityEditButton"]').first()
   }
 
-  // Botón para guardar la edición de una tarea
   saveEditTaskBtn() {
     return cy.get('[data-cy="save-entity"]')
   }

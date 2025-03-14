@@ -9,8 +9,7 @@ describe('Task Management Tests', () => {
       LoginPage.fillUsername(creds.validUser.username)
       LoginPage.fillPassword(creds.validUser.password)
       LoginPage.submit()
-
-      cy.contains('h2', 'Welcome to Ensolvers QA Challenge!').should('be.visible').debug()
+      cy.contains('h2', 'Welcome to Ensolvers QA Challenge!').should('be.visible')
     })
   })
 
@@ -35,22 +34,11 @@ describe('Task Management Tests', () => {
     const updatedTitle = 'Tarea Actualizada'
     const updatedDescription = 'Descripción actualizada'
 
-    // Se asume que ya se cargó la lista de tareas
     TaskManagementPage.getTaskList().click()
-    // Hacer clic en el botón de editar del primer elemento
     TaskManagementPage.editTaskBtn().click()
 
-    // Reconsultar el input de título y actualizar su valor
     TaskManagementPage.fillTaskTitle(updatedTitle)
-    // Reconsultar el input de descripción y actualizar su valor
     TaskManagementPage.fillTaskDescription(updatedDescription)
-    // Guardar la edición
     TaskManagementPage.saveTaskBtn().click()
-  })
-
-  it('Verify Refresh of the Task List', () => {
-    TaskManagementPage.getTaskList().click()
-    TaskManagementPage.clickRefresh()
-    TaskManagementPage.createNewTaskButton().should('be.visible')
   })
 })

@@ -21,7 +21,15 @@ This project is a solution to the challenge proposed by Ensolvers, which involve
 Key objectives:  
 - Create, edit, and delete tasks.  
 - Organize tasks into folders.  
-- Validate user interactions through automated testing.  
+- Validate user interactions through automated testing.
+
+## LINK TO TEST PLAN
+[TEST PLAN ENSOLVERS QA CHALLENGE.pdf](https://github.com/user-attachments/files/19254587/TEST.PLAN.ENSOLVERS.QA.CHALLENGE.pdf)
+
+
+##LINK TO TEST CASES 
+[TEST CASES.xlsx](https://github.com/user-attachments/files/19254601/TEST.CASES.xlsx)
+
 
 ---
 
